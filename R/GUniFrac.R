@@ -37,7 +37,7 @@ GUniFrac <- function (otu.tab, tree, alpha = c(0, 0.5, 1)) {
 	}	
 	
 	# Check OTU name consistency
-	if (sum(!(colnames(otu.tab) %in% tree$tip.label)) != 0) {
+	if (sum(!(rownames(otu.tab) %in% tree$tip.label)) != 0) {
 		stop("The OTU table contains unknown OTUs! OTU names
 					in the OTU table and the tree should match!" )
 	}
